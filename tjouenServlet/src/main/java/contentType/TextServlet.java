@@ -9,6 +9,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import test.StaticString;
 
 @WebServlet("/TextServlet")
 public class TextServlet extends HttpServlet {
@@ -19,7 +20,7 @@ public class TextServlet extends HttpServlet {
 		System.out.println("GET 요청");
 	}
 
-	// curl -X POST http://localhost:8080/tjoeunJSP/TextServlet ^
+	// curl -X POST http://localhost:8080/Servlet/TextServlet ^
 	// -H "Content-Type: text/plain" ^
 	// -d "Content Type - Text Type Test"
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -41,7 +42,7 @@ public class TextServlet extends HttpServlet {
 
 		// 4. 응답 텍스트 작성
 		String responseText = "응답할 텍스트";
-		response.setContentType("text/plain; charset=UTF-8");
+		response.setContentType(StaticString.TEXT_PLAIN);
 		PrintWriter writer = response.getWriter();
 		writer.println(responseText);
 	}

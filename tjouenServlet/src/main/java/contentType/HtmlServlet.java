@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import test.StaticString;
 
 @WebServlet("/HtmlServlet")
 public class HtmlServlet extends HttpServlet {
@@ -16,7 +17,7 @@ public class HtmlServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		// 응답
-		response.setContentType("text/html; charset=UTF-8");
+		response.setContentType(StaticString.TEXT_HTML);
 		PrintWriter writer = response.getWriter();
 		writer.println("<html>");
 		writer.println("<head>");

@@ -5,6 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import test.StaticString;
+
 import java.io.IOException;
 
 /**
@@ -31,7 +33,7 @@ public class C extends HttpServlet {
 		System.out.println("name : " + name);
 		
 		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset: UTF-8;");
+		response.setContentType(StaticString.TEXT_HTML);
 		response.getWriter().append("C 화면 입니다.").append("name : " + name) ;
 	}
 

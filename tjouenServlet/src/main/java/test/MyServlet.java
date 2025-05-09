@@ -16,7 +16,7 @@ public class MyServlet extends HttpServlet {
             throws ServletException, IOException {
         
     	// HTML 컨텐츠 타입으로 
-    	response.setContentType("text/html");
+    	response.setContentType(StaticString.TEXT_HTML);
         PrintWriter writer = response.getWriter();
 		// "Hello, World!"를 응답한다.
         writer.print("Hello, World!");

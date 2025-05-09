@@ -1,4 +1,4 @@
-package contentType;
+package file;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletOutputStream;
@@ -45,7 +45,7 @@ public class FileDownloadServlet extends HttpServlet {
 		// - Content-Type : application/octet-stream
 		// - Content-Disposition : attachment
 		response.setCharacterEncoding(StaticString.UTF_8);
-		response.setContentType("application/octet-stream");
+		response.setContentType(StaticString.OCTET_STREAM);
 		fileName = URLEncoder.encode(fileName, StaticString.UTF_8);
 		response.setHeader("Content-Disposition", "attachment; filename=\"" + fileName + "\"");
 
