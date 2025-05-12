@@ -15,7 +15,7 @@
 	<button type="button" id="btn">이미지 보기</button>
 
 <h1> 썸네일 </h1>
-<img src="/Servlet/img" id="thumbnail" width="300px" alt="이미지없음" width="300px" />
+<img src="/tjoeunServlet/img" id="thumbnail" width="300px" alt="이미지없음" width="300px" />
 
 </form>
 
@@ -24,7 +24,7 @@
 	const btn = document.getElementById("btn") ;
 	btn.addEventListener("click", function (event) {
 		let fileName = document.getElementById("fileName").value ;
-		const imageUrl = "/Servlet/img?fileName=" + fileName ;
+		const imageUrl = "/tjoeunServlet/img?fileName=" + fileName ;
 		const thumbnail = document.getElementById("thumbnail") ;
 		thumbnail.src = imageUrl ;
 	});

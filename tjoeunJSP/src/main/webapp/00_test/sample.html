@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 240px;
+      height: 240px;
+      background: rgba(220, 240, 255, 0.6);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(180, 220, 255, 0.5);
+      padding: 30px 20px;
+      position: relative;
+      box-sizing: border-box;
+    }
+    
+    .shadow {
+      box-shadow: 0 0 5px rgba(255, 255,255, 1);
+    }
+
+    .line {
+      height: 1px;
+      width : 200px;
+      background: white;
+      position: absolute;
+      z-index : 5;
+      box-sizing: border-box;
+    }
+
+	.l1 {top : calc( 50%  - 70px ); }
+	.l2 {top : calc( 50%  - 35px ); }
+	.l3 {top : calc( 50% ); transform: translateY(-0.5px); }
+	.l4 {top : calc( 50%  + 35px ); }
+	.l5 {top : calc( 50%  + 70px ); }
+   
+    
+    .icon {
+      position: absolute;
+      font-size: 12px;
+      color: white;
+    }
+
+    .icon.star1 { top: 18px; left: 10px; }
+    .icon.star2 { top: 80px; right: 45px; font-size: 1.5em;}
+    .icon.star3 { top: 142px; left: 50px; font-size: 1.2em;}
+    .icon.heart { top: 205px; right: 20px; }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="line l1 shadow"></div>
+    <div class="line l2 shadow"></div>
+    <div class="line l3 shadow"></div>
+    <div class="line l4 shadow"></div>
+    <div class="line l5 shadow"></div>
+
+    <div class="line l1"></div>
+    <div class="line l2"></div>
+    <div class="line l3"></div>
+    <div class="line l4"></div>
+    <div class="line l5"></div>
+    
+    <!-- 아이콘들 -->
+    <div class="icon star1">✦</div>
+    <div class="icon star2">✧</div>
+    <div class="icon star3">✶</div>
+    <div class="icon heart">♡</div>
+  </div>
+</body>
+</html>

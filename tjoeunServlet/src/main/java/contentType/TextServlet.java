@@ -20,7 +20,7 @@ public class TextServlet extends HttpServlet {
 		System.out.println("GET 요청");
 	}
 
-	// curl -X POST http://localhost:8080/Servlet/TextServlet ^
+	// curl -X POST http://localhost:8080/tjoeunServlet/TextServlet ^
 	// -H "Content-Type: text/plain" ^
 	// -d "Content Type - Text Type Test"
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

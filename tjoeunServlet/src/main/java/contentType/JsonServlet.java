@@ -37,7 +37,7 @@ public class JsonServlet extends HttpServlet {
 	//
 	// 3. org.json
 
-	// curl -X GET http://localhost:8080/Servlet/JsonServlet ^
+	// curl -X GET http://localhost:8080/tjoeunServlet/JsonServlet ^
 	// -H "Content-Type: application/json" ^
 	// -d
 	// "{\"name\":\"ALOHA\",\"age\":\"20\",\"roles\":[\"ROLE_USER\",\"ROLE_ADMIN\",\"ROLE_MGR\"]}"
@@ -66,7 +66,7 @@ public class JsonServlet extends HttpServlet {
 
 	}
 
-	// curl -X POST http://localhost:8080/Servlet/JsonServlet ^
+	// curl -X POST http://localhost:8080/tjoeunServlet/JsonServlet ^
 	// -H "Content-Type: application/json" ^
 	// -d
 	// "{\"name\":\"ALOHA\",\"age\":\"20\",\"roles\":[\"ROLE_USER\",\"ROLE_ADMIN\",\"ROLE_MGR\"]}"
@@ -94,7 +94,7 @@ public class JsonServlet extends HttpServlet {
 		writer.println(jsonString);
 	}
 
-	// curl -X PUT http://localhost:8080/Servlet/JsonServlet ^
+	// curl -X PUT http://localhost:8080/tjoeunServlet/JsonServlet ^
 	// -H "Content-Type: application/json" ^
 	// -d
 	// "{\"name\":\"ALOHA\",\"age\":\"20\",\"roles\":[\"ROLE_USER\",\"ROLE_ADMIN\",\"ROLE_MGR\"]}"

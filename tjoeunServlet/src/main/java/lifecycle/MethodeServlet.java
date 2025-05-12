@@ -103,12 +103,12 @@ public class MethodeServlet extends HttpServlet {
 		writer.println("<h1>제목 : " + title + "</h1>");
 		writer.println("<h1>내용 : " + content + "</h1>");
 		/*
-		 curl -X PUT http://localhost:8080/Servlet/method ^
+		 curl -X PUT http://localhost:8080/tjoeunServlet/method ^
 		 -H "Content-Type: application/json" ^
 		 -d "{\"no\" : \"1\", \"title\" : \"제목\", \"content\" :\"내용\"}"
 		*/
 		// curl : 커멘드라인 URL
-		// curl -X DELETE http://localhost:8080/Servlet/method?no=10
+		// curl -X DELETE http://localhost:8080/tjoeunServlet/method?no=10
 		// -X : 요청 메소드 지정
 		// -H : 헤더 지정
 		// -d : 바디 지정

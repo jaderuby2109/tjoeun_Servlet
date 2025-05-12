@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .paper {
+      width: 945px;
+      height: 1181px;
+      display: grid;
+      grid-template: 60% 40% bg-top-right bg-bottom-left ,
+       35% 65% bg-left bg-left  ;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      background: white;
+    }
+
+    /* 배경 블럭들 */
+    .bg-top-left {
+      background:
+        radial-gradient(#ccc 2px, transparent 2px),
+        #f8f8f8;
+      background-size: 14px 14px;
+    }
+
+    .bg-bottom-left {
+      background-color: #fff6df;
+    }
+    
+    .bg-mid-left {
+      background-color: #fff6df; /* 크림색 */
+      background-color: #eaf6e8; /* 연녹색 */
+      background-color: #fce7ec; /* 연핑크 영역 */
+    }
+  </style>
+</head>
+<body>
+  <div class="paper">
+    <div class="bg-top-left"></div>      <!-- 1행 1열 -->
+    <div class="bg-top-right"></div>     <!-- 1행 2열 -->
+    <div class="bg-mid-left"></div>      <!-- 2행 1열 -->
+  </div>
+</body>
+</html>

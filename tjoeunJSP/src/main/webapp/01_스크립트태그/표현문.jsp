@@ -11,7 +11,7 @@
 <%-- 선언문 --%>
 <%! 
 	int a = 100 ;
-	String url = "/Servlet/img" ;
+	String url = "/tjoeunServlet/img" ;
 %>
 <%-- 스크립틀릿 --%>
 <%

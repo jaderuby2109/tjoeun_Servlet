@@ -22,7 +22,7 @@ import jakarta.xml.bind.Marshaller;
 public class XmlServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	// curl -X GET http://localhost:8080/Servlet/XmlServlet
+	// curl -X GET http://localhost:8080/tjoeunServlet/XmlServlet
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -34,7 +34,7 @@ public class XmlServlet extends HttpServlet {
 		writer.println(resultStr);
 	}
 
-	// curl -X POST http://localhost:8080/Servlet/XmlServlet ^
+	// curl -X POST http://localhost:8080/tjoeunServlet/XmlServlet ^
 	// -H "Content-Type: application/xml" ^
 	// -d "<Users><name>김조은</name><age>20</age></Users>"
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
