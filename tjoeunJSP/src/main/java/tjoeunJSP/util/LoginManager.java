@@ -34,7 +34,7 @@ public class LoginManager {
 
 	// 사용자 제거
 	public void removeUser(String sessionId) {
-		List<String> userIdList = (List<String>) loginUsers.values();
+		List<String> userIdList = new ArrayList<String>(loginUsers.keySet());
 
 		for (int i = 0; i < userIdList.size(); i++) {
 			String id = userIdList.get(i);

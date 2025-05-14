@@ -36,5 +36,4 @@ public class TestFilter extends HttpFilter implements Filter {
 	public void destroy() {
 		System.out.println("TestFilter 제거...");
 	}
-
 }
