@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 	public boolean idCheck(String username) {
 		System.out.println("UserServiceImpl idCheck : " + username);
 
-		Map<Object, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<>();
 		map.put("username", username);
 		Users user = null;
 
@@ -63,26 +63,26 @@ public class UserServiceImpl implements UserService {
 		String username = user.getUsername();
 		String password = user.getPassword();
 
-		Map<Object, Object> map = new HashMap<Object, Object>();
+		Map<String, Object> map = new HashMap<>();
 		map.put("username", username);
 
 		Users joinedUser = null;
-		
+
 		try {
 			joinedUser = userDAO.selectBy(map);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		// 아이디가 존대하지 않는 경우
 		if (joinedUser == null) {
 			System.out.println("아이디가 존재하지 않습니다.");
 			return false;
-		
+
 		} else {
-			
+
 			System.out.println("아이디 존재");
-			
+
 			System.out.println("password : " + password);
 			System.out.println("password : " + BCrypt.hashpw(password, BCrypt.gensalt()));
 
@@ -90,7 +90,7 @@ public class UserServiceImpl implements UserService {
 			String joinedpw = joinedUser.getPassword();
 			System.out.println("joinedpw : " + joinedpw);
 			boolean checkpw = BCrypt.checkpw(password, joinedpw);
-			
+
 			System.out.println("비밀번호 일치 여부 : " + checkpw);
 			return checkpw;
 		}
@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public Users selectByUsername(String username) {
 
-		Map<Object, Object> map = new HashMap<Object, Object>();
+		Map<String, Object> map = new HashMap<>();
 		map.put("username", username);
 
 		Users user = null;
@@ -108,28 +108,7 @@ public class UserServiceImpl implements UserService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	
-		return user ;
+
+		return user;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

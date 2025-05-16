@@ -17,7 +17,7 @@
 	<main>
 	<div class="container mt-5">
 		<h2 class="mb-4">게시글 조회</h2>
-		<form action="<%= root%>/board/create">
+		<form action="">
 			<input type="hidden" name="id" value="${board.id}" />
 
 			<div class="mb-3">
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="d-flex justify-content-end mt-4">
-				<a href="<%=root %>/board/update" class="btn btn-primary me-2">수정</a>
+				<a href="<%=root %>/board/update.jsp?id=${ board.id }" class="btn btn-primary me-2">수정</a>
 				<a href="<%=root %>/board/list" class="btn btn-secondary">목록</a>
 			</div>
 		</form>

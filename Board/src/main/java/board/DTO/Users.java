@@ -2,6 +2,7 @@ package board.DTO;
 
 import java.util.Date;
 
+import com.alohaclass.jdbc.annotation.Column;
 import com.alohaclass.jdbc.annotation.Pk;
 import com.alohaclass.jdbc.annotation.Table;
 
@@ -21,6 +22,7 @@ public class Users {
 	private String id;
 	private String username;
 	private String password;
+	@Column(exist = false)
 	private String passwordConfirm;
 	private String name;
 	private String email;

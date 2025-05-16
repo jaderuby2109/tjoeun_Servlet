@@ -18,12 +18,12 @@ import lombok.NoArgsConstructor;
 public class Board {
 
 	@Pk
-	private int no  ;
-	private String id ;
-	private String title ;
+	private int no;
+	private String id;
+	private String title;
 	private int userNo;
-	private String content ;
-	private Date createdAt ;
-	private Date updatedAt ;
-	
+	private String content;
+	private Date createdAt;
+	private Date updatedAt;
+
 }

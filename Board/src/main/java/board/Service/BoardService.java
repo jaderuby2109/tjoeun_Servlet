@@ -17,9 +17,11 @@ public interface BoardService {
 
 	// 게시글 수정
 	boolean update(Board board);
+	boolean updateById(Board board);
 
 	// 게시글 삭제
 	boolean delete(Board board);
 
-	Board selectById(String i);
+	// 게시글 조회
+	Board selectById(String id);
 }

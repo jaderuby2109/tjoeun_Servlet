@@ -47,8 +47,7 @@
                     <tr class="text-center">
                         <td>${board.no}</td>
                         <td class="text-start">
-                        	<a href="<%=root %>/board/read.jsp?id=${ board.id }">
-	                        	${board.title}
+                        	<a href="<%=root %>/board/read.jsp?id=${ board.id }">${board.title}
                         	</a>
                         </td>
                         <td>${board.userNo}</td>

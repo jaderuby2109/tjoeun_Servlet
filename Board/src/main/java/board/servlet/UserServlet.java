@@ -26,17 +26,17 @@ public class UserServlet extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println("아이디 중복 확인...");
 
-		String uri = request.getRequestURI(); // /Board/join
-		String root = request.getContextPath(); // /Board
+		String uri = request.getRequestURI();		// /Board/join
+		String root = request.getContextPath();		// /Board
 		String path = request.getPathInfo();
 
 		if (path.equals("/idCheck")) {
 			String username = request.getParameter("username");
 			boolean check = userService.idCheck(username);
 			response.getWriter().print(check);
-			
+
 		} else if (path.equals("/logout")) {
-			
+
 			System.out.println("로그아웃");
 			HttpSession session = request.getSession();
 			session.invalidate();
@@ -49,13 +49,13 @@ public class UserServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String uri = request.getRequestURI(); // /Board/join
-		String root = request.getContextPath(); // /Board
+		String uri = request.getRequestURI();		// /Board/join
+		String root = request.getContextPath();		// /Board
 		String path = request.getPathInfo();
 
 		// /join - 회원 가입
 		if (path.equals("/join")) {
-			
+
 			System.out.println("회원가입 요청 처리...");
 
 			String username = request.getParameter("username");
@@ -79,9 +79,9 @@ public class UserServlet extends HttpServlet {
 				// 회원 가입 실패
 				response.sendRedirect(root + "/join.jsp?error=true");
 			}
-			
+
 		} else if (path.equals("/login")) {
-			
+
 			// 회원 조회
 			String username = request.getParameter("username");
 			String passowrd = request.getParameter("password");
@@ -99,6 +99,7 @@ public class UserServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 				session.setAttribute("loginId", user.getUsername());
 				session.setAttribute("loginUser", loginUser);
+				System.out.println("loginUser.getNo() : " + loginUser.getNo());
 				response.sendRedirect(root + "/");
 			} else {
 				System.out.println("로그인 실패");
